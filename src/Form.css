@@ -1,0 +1,22 @@
+.add-idea-section {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.form {
+  align-items: center;
+  background-color: aliceblue;
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  justify-content: center;
+  padding: 30px;
+  width: 300px;
+}
+
+label,
+button,
+input {
+  width: 60%;
+}

@@ -9,7 +9,15 @@ class FilterForm extends Component {
 
   render() {
     return (
-      
+      <form>
+        <label>Search</label>
+        <input
+        type="text"
+        placeholder="seacrh for idea"
+        />
+      </form>
     )
   }
 }
+
+export default FilterForm;

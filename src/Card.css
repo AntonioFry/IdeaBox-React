@@ -1,5 +1,14 @@
 .card {
+  display: flex;
   box-sizing: border-box;
   border: 2px solid black;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 10px;
+}
+
+h2,
+p {
+  text-align: center;
+  width: 100%;
 }

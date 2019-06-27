@@ -29,16 +29,16 @@ class App extends Component {
 
   render() {
     return (
-      <main className='App'>
+      <div className="App">
         <aside>
           <h1>IdeaBox</h1>
           <FilterForm />
         </aside>
-        <section className="add-idea-section">
-          <Form addIdea={this.addIdea}/>
-        </section>
-          <Ideas ideas={this.state.ideas} removeIdea={this.removeIdea}/>
-      </main>
+        <main className='App'>
+            <Form addIdea={this.addIdea}/>
+            <Ideas className="idea-section" ideas={this.state.ideas} removeIdea={this.removeIdea}/>
+        </main>
+      </div>
     )
   }
 }
