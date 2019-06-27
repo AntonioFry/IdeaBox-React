@@ -25,9 +25,10 @@ aside {
 
 h1 {
   color: white;
+  font-size: 2em;
   letter-spacing: 1px;
   margin: 0px 10px 10px;
-  font-size: 2em;
+  padding: 10px;
 }
 
 /* .App-logo {
