@@ -24,9 +24,10 @@ class FilterForm extends Component {
 
   render() {
     return (
-      <form>
-        <label for="filter-search">Search</label>
+      <form className="filter-form">
+        <label for="filter-search" className="filter-label">Search</label>
         <input
+        className="filter-search"
         type="text"
         name="value"
         value={this.state.value}

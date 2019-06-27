@@ -33,7 +33,7 @@ class App extends Component {
     const filteredIdeas = this.state.ideas.filter(idea => {
       return idea.id !== id;
     });
-    this.setState({ ideas: filteredIdeas });
+    this.setState({ ideas: filteredIdeas, filteredIdeas: filteredIdeas });
   }
 
   filterSearch = (search) => {

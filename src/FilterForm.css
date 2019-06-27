@@ -1,0 +1,23 @@
+.filter-form {
+  border-bottom: 1px rgba(105, 102, 100, 1) solid;
+  border-top: 1px rgb(105, 102, 100, 1) solid;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0px 0px;
+  padding: 10px;
+}
+
+.filter-search {
+  font-size: 1em;
+  height: 20px;
+  margin: 5px 0px;
+  width: 100%;
+}
+
+.filter-label {
+  color: rgba(218,216,214,1);
+  font-size: 1.2em;
+  height: 20px;
+  margin: 5px 0px;
+  width: 100%;
+}
