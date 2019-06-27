@@ -1,7 +1,10 @@
 .ideas {
+  align-items: center;
+  background-color: rgba(242,242,241,1);
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
+  min-height: 275px;
   padding: 20px;
   width: 100%;
 }

@@ -36,7 +36,7 @@ class App extends Component {
         </aside>
         <main className='App'>
             <Form addIdea={this.addIdea}/>
-            <Ideas className="idea-section" ideas={this.state.ideas} removeIdea={this.removeIdea}/>
+            <Ideas ideas={this.state.ideas} removeIdea={this.removeIdea}/>
         </main>
       </div>
     )
