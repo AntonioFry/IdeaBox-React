@@ -9,15 +9,24 @@ class App extends Component {
     super();
     this.state = {
       ideas: [
-        { id: 1, title: 'title', description: 'description' },
-        { id: 2, title: 'title', description: 'description' },
+        { id: 1, title: 'heyo', description: 'buddy' },
+        { id: 2, title: 'apples', description: 'friut' },
         { id: 3, title: 'title', description: 'description' }
-      ]
+      ],
+      filteredIdeas: [],
     }
   }
 
   addIdea = (newIdea) => {
     this.setState({ ideas: [...this.state.ideas, newIdea] });
+  }
+
+  renderIdeas = () => {
+    if (!!this.state.filteredIdeas.length) {
+      return this.state.filteredIdeas;
+    } else {
+      return this.state.ideas;
+    }
   }
 
   removeIdea = (id) => {
@@ -27,16 +36,20 @@ class App extends Component {
     this.setState({ ideas: filteredIdeas });
   }
 
+  filterSearch = (search) => {
+    this.setState({ filteredIdeas: search });
+  }
+
   render() {
     return (
       <div className="App">
         <aside>
           <h1>IdeaBox</h1>
-          <FilterForm />
+          <FilterForm filterSearch={this.filterSearch} ideas={this.state.ideas}/>
         </aside>
         <main className='App'>
             <Form addIdea={this.addIdea}/>
-            <Ideas ideas={this.state.ideas} removeIdea={this.removeIdea}/>
+            <Ideas ideas={this.renderIdeas()} removeIdea={this.removeIdea}/>
         </main>
       </div>
     )

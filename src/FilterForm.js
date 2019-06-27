@@ -4,16 +4,34 @@ import './FilterForm.css';
 class FilterForm extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      value: '',
+    };
+  }
+
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+    this.submitFilter(event.target.value);
+  }
+
+  submitFilter = (event) => {
+    const { ideas, filterSearch } = this.props;
+    const filteredIdeas = ideas.filter(idea => {
+      return idea.title.toUpperCase().includes(event.toUpperCase());
+    });
+    filterSearch(filteredIdeas);
   }
 
   render() {
     return (
       <form>
-        <label>Search</label>
+        <label for="filter-search">Search</label>
         <input
         type="text"
+        name="value"
+        value={this.state.value}
         placeholder="seacrh for idea"
+        onChange={event => this.handleChange(event)}
         />
       </form>
     )
