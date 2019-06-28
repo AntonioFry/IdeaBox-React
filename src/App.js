@@ -9,9 +9,9 @@ class App extends Component {
     super();
     this.state = {
       ideas: [
-        { id: 1, title: 'heyo', description: 'buddy' },
-        { id: 2, title: 'apples', description: 'friut' },
-        { id: 3, title: 'title', description: 'description' }
+        { id: 1, title: 'heyo', description: 'buddy'},
+        { id: 2, title: 'apples', description: 'friut'},
+        { id: 3, title: 'title', description: 'description'}
       ],
       filteredIdeas: [],
     }
@@ -48,8 +48,8 @@ class App extends Component {
           <FilterForm filterSearch={this.filterSearch} ideas={this.state.ideas}/>
         </aside>
         <main className='App'>
-            <Form addIdea={this.addIdea}/>
-            <Ideas ideas={this.renderIdeas()} removeIdea={this.removeIdea}/>
+          <Form addIdea={this.addIdea}/>
+          <Ideas ideas={this.renderIdeas()} removeIdea={this.removeIdea}/>
         </main>
       </div>
     )
