@@ -3,6 +3,7 @@ import './App.css';
 import Ideas from './Ideas';
 import FilterForm from './FilterForm';
 import Form from './Form';
+import QualityForm from './QualityContainer';
 
 class App extends Component {
   constructor() {
@@ -46,6 +47,7 @@ class App extends Component {
         <aside>
           <h1>IdeaBox</h1>
           <FilterForm filterSearch={this.filterSearch} ideas={this.state.ideas}/>
+          <QualityForm />
         </aside>
         <main className='App'>
           <Form addIdea={this.addIdea}/>
