@@ -16,7 +16,7 @@ class Card extends Component {
       <div className="card">
         <h2>{title}</h2>
         <p>{description}</p>
-        <button onClick={() => removeIdea(id)}>Trash this bitch</button>
+        <button onClick={() => removeIdea(id)}>Remove Idea</button>
       </div>
     )
   }
