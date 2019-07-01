@@ -1,5 +1,4 @@
 .quality-container {
-  border-bottom: 1px rgba(105, 102, 100, 1) solid;
   display: flex;
   flex-wrap: wrap;
   margin: 0px;
@@ -15,6 +14,7 @@
 
 .add-quality-input {
   box-sizing: border-box;
+  font-size: 1em;
   height: 25px;
   width: 90%;
 }
@@ -27,21 +27,4 @@
   padding: 0px;
   text-align: center;
   width: 10%;
-}
-
-.quality-button {
-  background-color: rgb(100, 100, 100, 0);
-  border: 0px;
-  color: rgba(218,216,214,1);
-  font-size: 1em;
-  height: 25px;
-  margin: 2px 0px;
-  padding: 0px 10px;
-  text-align: left;
-  width: 100%;
-}
-
-.quality-button :hover {
-  background-color: rgba(218,216,214,1);
-  color: black;
 }

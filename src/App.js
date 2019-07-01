@@ -4,6 +4,7 @@ import Ideas from './Ideas';
 import FilterForm from './FilterForm';
 import Form from './Form';
 import QualityForm from './QualityContainer';
+import QualityButton from './QualityButton';
 
 class App extends Component {
   constructor() {
@@ -15,6 +16,7 @@ class App extends Component {
         { id: 3, title: 'title', description: 'description'}
       ],
       filteredIdeas: [],
+      qualities: ['Swill', 'Plausible', 'Genius']
     }
   }
 
@@ -42,12 +44,19 @@ class App extends Component {
   }
 
   render() {
+    const qualityButtons = this.state.qualities.map(quality => {
+      return <QualityButton quality={quality} />
+    });
+
     return (
       <div className="App">
         <aside>
           <h1>IdeaBox</h1>
           <FilterForm filterSearch={this.filterSearch} ideas={this.state.ideas}/>
-          <QualityForm />
+          <div className='quality-container'>
+            <QualityForm />
+            {qualityButtons}
+          </div>
         </aside>
         <main className='App'>
           <Form addIdea={this.addIdea}/>

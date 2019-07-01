@@ -31,7 +31,7 @@ class FilterForm extends Component {
         type="text"
         name="value"
         value={this.state.value}
-        placeholder="seacrh for idea"
+        placeholder="Seacrh for an idea"
         onChange={event => this.handleChange(event)}
         />
       </form>

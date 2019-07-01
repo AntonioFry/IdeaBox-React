@@ -11,18 +11,16 @@ class QualityContainer extends Component {
 
   render() {
     return (
-      <div className="quality-container">
+      <div className="add-button-container">
         <form className="add-quality-form">
-          <input 
+          <input
+            placeholder="Create a quality"
             className='add-quality-input'
             type='text'
             value={this.state.quality}
-          />
+            />
           <button className="add-quality-button">&#65291;</button>
         </form>
-        <button className="quality-button">Swill</button>
-        <button className="quality-button">Plausible</button>
-        <button className="quality-button">Genius</button>
       </div>
     )
   }
